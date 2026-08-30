@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-labelledby="map-title map-desc">
+  <title id="map-title">FalconExLover system map</title>
+  <desc id="map-desc">A neon cyberpunk diagram showing Product flowing to Platform and Operations, connected through an automation core.</desc>
+  <defs>
+    <linearGradient id="map-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05070D"/>
+      <stop offset="1" stop-color="#0A0F18"/>
+    </linearGradient>
+    <linearGradient id="map-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E7FF"/>
+      <stop offset="0.5" stop-color="#7CFF00"/>
+      <stop offset="1" stop-color="#FF2BD6"/>
+    </linearGradient>
+    <pattern id="map-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#00E7FF" stroke-opacity="0.055"/>
+    </pattern>
+    <filter id="map-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0l10 5-10 5z" fill="#00E7FF"/>
+    </marker>
+    <marker id="arrow-lime" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0l10 5-10 5z" fill="#7CFF00"/>
+    </marker>
+    <marker id="arrow-magenta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0l10 5-10 5z" fill="#FF2BD6"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="250" rx="16" fill="url(#map-bg)"/>
+  <rect width="1200" height="250" rx="16" fill="url(#map-grid)"/>
+  <text x="42" y="38" fill="#A9BDCB" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="3">SYSTEM MAP // EXECUTION PATH</text>
+  <circle cx="1136" cy="31" r="5" fill="#7CFF00" filter="url(#map-glow)"/>
+  <text x="1120" y="36" text-anchor="end" fill="#7CFF00" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="11" letter-spacing="2">LIVE</text>
+
+  <path d="M296 121H442" fill="none" stroke="#00E7FF" stroke-opacity="0.18" stroke-width="8"/>
+  <path d="M296 121H442" fill="none" stroke="#00E7FF" stroke-width="2.5" marker-end="url(#arrow-cyan)"/>
+  <path d="M758 121H904" fill="none" stroke="#FF2BD6" stroke-opacity="0.18" stroke-width="8"/>
+  <path d="M758 121H904" fill="none" stroke="#FF2BD6" stroke-width="2.5" marker-end="url(#arrow-magenta)"/>
+  <path d="M600 169V206" fill="none" stroke="#7CFF00" stroke-opacity="0.18" stroke-width="8"/>
+  <path d="M600 169V206" fill="none" stroke="#7CFF00" stroke-width="2.5" marker-end="url(#arrow-lime)"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g>
+      <path d="M42 76h254v90H42l-14-14V90z" fill="#00E7FF" fill-opacity="0.065" stroke="#00E7FF" stroke-width="1.5"/>
+      <text x="62" y="110" fill="#00E7FF" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="2">01 / PRODUCT</text>
+      <text x="62" y="140" fill="#F5FBFF" font-size="20" font-weight="700">Ideas into outcomes</text>
+    </g>
+    <g>
+      <path d="M452 76h296l14 14v62l-14 14H452l-14-14V90z" fill="#7CFF00" fill-opacity="0.06" stroke="#7CFF00" stroke-width="1.5"/>
+      <text x="474" y="110" fill="#7CFF00" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="2">02 / PLATFORM</text>
+      <text x="474" y="140" fill="#F5FBFF" font-size="20" font-weight="700">Reliable foundations</text>
+    </g>
+    <g>
+      <path d="M904 76h254l14 14v62l-14 14H904z" fill="#FF2BD6" fill-opacity="0.06" stroke="#FF2BD6" stroke-width="1.5"/>
+      <text x="926" y="110" fill="#FF2BD6" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="2">03 / OPERATIONS</text>
+      <text x="926" y="140" fill="#F5FBFF" font-size="20" font-weight="700">Proof in production</text>
+    </g>
+  </g>
+
+  <g transform="translate(479 202)">
+    <rect width="242" height="34" rx="17" fill="#7CFF00" fill-opacity="0.08" stroke="#7CFF00" stroke-width="1.5"/>
+    <circle cx="21" cy="17" r="5" fill="#7CFF00" filter="url(#map-glow)"/>
+    <text x="121" y="22" text-anchor="middle" fill="#DFFFD1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" font-weight="700" letter-spacing="2">AUTOMATION CORE</text>
+  </g>
+
+  <rect x="1" y="1" width="1198" height="248" rx="15" fill="none" stroke="url(#map-line)" stroke-opacity="0.42" stroke-width="2"/>
+</svg>
