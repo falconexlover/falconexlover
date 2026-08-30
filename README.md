@@ -1,101 +1,78 @@
-<div align="center">
+<picture>
+  <source media="(max-width: 720px)" srcset="./assets/brand/github-readme-hero-mobile-780x390.png">
+  <img src="./assets/brand/github-readme-hero-desktop-1280x320.png" alt="Star_Burster — Product and Operational Systems Engineer. Merged does not mean delivered." width="1280">
+</picture>
 
-![Neon operations header](assets/neon-ops-header.svg)
+# Star_Burster
 
-# `falconexlover // systems online`
+**Product & Operational Systems Engineer**
 
-**Systems & Automation Engineer · TechOps · Full-stack delivery**
+I turn fragile digital processes into working, observable, and recoverable systems.
 
-I build software that survives contact with production — from product flows and APIs to deployment, observability, runbooks, and incident closure.
+Writing code is part of the job. Delivery also needs a real acceptance flow, visible operating evidence, and a recovery path that does not depend on guesswork.
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-081018?style=flat-square&logo=typescript&logoColor=00F0FF)](https://www.typescriptlang.org/)
-[![Python](https://img.shields.io/badge/Python-081018?style=flat-square&logo=python&logoColor=FF3CAC)](https://www.python.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-081018?style=flat-square&logo=postgresql&logoColor=00F0FF)](https://www.postgresql.org/)
-[![Docker](https://img.shields.io/badge/Docker-081018?style=flat-square&logo=docker&logoColor=FF3CAC)](https://www.docker.com/)
-[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-081018?style=flat-square&logo=githubactions&logoColor=00F0FF)](https://github.com/features/actions)
+## What I work on
 
-</div>
+- product and service workflows that cross interface, API, data, deployment, and operations;
+- automation that is reviewable, observable, and safe to change;
+- release and recovery paths with explicit acceptance checks;
+- bounded technical investigations where known facts and uncertainty stay separate.
 
-```text
-> booting systems profile...
-> product engineering ........ READY
-> infrastructure & automation  READY
-> observability & recovery .... READY
-> real-world acceptance ....... REQUIRED
-```
-
-## `01 // systems profile`
-
-My work sits where product engineering meets operations. I design and ship customer-facing applications, internal tools, automation, and the production systems around them. The finish line is a working business flow — backed by tests, logs, monitoring, documentation, and a recovery path.
-
-- **Systems & TechOps:** Windows and remote-work environments, enterprise applications, endpoint support, backups, monitoring, and evidence-led incident response.
-- **Full-stack engineering:** TypeScript, Next.js, React, Node.js, Python, APIs, PostgreSQL, Redis, and maintainable domain workflows.
-- **Delivery engineering:** Docker, Nginx, CI/CD, environment management, smoke tests, observability, release runbooks, and rollback planning.
-- **Automation:** repetitive operational work turned into explicit, reviewable, and recoverable procedures.
-- **AI-assisted engineering:** LLMs used as force multipliers for research, prototyping, implementation, and review — with human judgment and production evidence as the gate.
-
-![System map: product, platform, operations, and feedback loops](assets/system-map.svg)
-
-## `02 // selected missions`
-
-| Mission | What I delivered | Core systems | Case file |
-|:--|:--|:--|:--:|
-| **Booking & operations platform** | Production architecture, deployment flow, configuration boundaries, observability, security checks, and operational runbooks | Node.js · PostgreSQL · Redis · Docker · Nginx · Prometheus · Grafana · Loki | [Open →](case-studies/booking-operations-platform.md) |
-| **Catalog & commerce platform** | Typed catalog and request workflows, search and filters, data modeling, API validation, SEO foundations, and automated quality gates | Next.js · TypeScript · React · Prisma · PostgreSQL · Zod | [Open →](case-studies/catalog-commerce-platform.md) |
-| **Employee operations portal** | A configurable request engine spanning 30 request types and 13 departments, role-based queues, SLA workflows, offline support, backups, and deployment documentation | Next.js · TypeScript · PostgreSQL · Docker · Playwright · PWA | [Open →](case-studies/employee-operations-portal.md) |
-| **Enterprise operations** | Day-to-day reliability across employee endpoints, remote access, business applications, printing, monitoring, backup, and incident recovery | Windows · RDS · PowerShell · SQL · monitoring & support tooling | Private environment |
-
-## `03 // public signal`
-
-### [Mini CRM lead routing service](https://github.com/falconexlover/CRM_TEST)
-
-FastAPI service for weighted lead routing with workload limits, analytics, validation, and OpenAPI documentation.
-
-### [URL shortener](https://github.com/falconexlover/url-shortener-boto)
-
-Compact FastAPI application with SQLite persistence, input validation, CRUD endpoints, and automated tests.
-
-## `04 // systems matrix`
-
-| Layer | Tools and practices |
-|:--|:--|
-| **Product** | TypeScript · Next.js · React · Tailwind CSS · PWA · accessible, responsive interfaces |
-| **Services** | Node.js · Python · FastAPI · REST APIs · Zod · typed contracts |
-| **Data** | PostgreSQL · SQLite · Redis · Prisma · migrations · backup and restore workflows |
-| **Platform** | Docker · Docker Compose · Nginx · Linux · Windows · PowerShell |
-| **Delivery** | GitHub Actions · branch governance · tests · smoke checks · security scanning · release runbooks |
-| **Observability** | structured logs · Prometheus · Grafana · Loki · Alertmanager · operational dashboards |
-| **Quality loop** | Playwright · validation · monitoring · rollback planning · real-user scenario verification |
-
-## `05 // operating protocol`
+## Operating method
 
 ```text
-[signal] -> [evidence] -> [smallest safe change] -> [verification] -> [runbook]
-     ^                                                              |
-     +----------------------- feedback loop -------------------------+
+CONTEXT → RISK → SMALLEST REVERSIBLE CHANGE → VERIFY THE REAL FLOW → RECOVER
 ```
 
-1. Start with the real user or business outcome.
-2. Inspect the system before changing it; reconcile conflicting signals.
-3. Make the smallest reversible change that addresses the cause.
-4. Verify through tests, telemetry, and the actual operating scenario.
-5. Leave the system easier to understand, recover, and extend.
+1. Define what must work and who accepts the result.
+2. Separate known facts from assumptions.
+3. Choose the smallest safe change that can be reviewed or reversed.
+4. Verify tests, operating signals, and the real user or business flow.
+5. Document the remaining uncertainty and recovery path.
 
-## `06 // current trajectory`
+## Selected case studies
 
-I am deepening the connection between **TechOps, automation, and full-stack product engineering**: systems where delivery does not stop at a merge, and operations do not depend on tribal knowledge.
+These are owner-authored technical cases. They document implementation choices and operating practices; they do not claim independent validation of business impact.
 
-Areas I keep exploring:
+- [Booking & Operations Platform](https://github.com/falconexlover/falconexlover/blob/main/case-studies/booking-operations-platform.md) — a documented Node.js delivery and observability stack using PostgreSQL, Redis, Docker Compose, Nginx, Prometheus, Grafana, Loki, and Alertmanager.
+- [Catalog & Commerce Platform](https://github.com/falconexlover/falconexlover/blob/main/case-studies/catalog-commerce-platform.md) — typed catalog and request workflows using Next.js, TypeScript, Prisma, PostgreSQL, and Zod.
+- [Employee Operations Portal](https://github.com/falconexlover/falconexlover/blob/main/case-studies/employee-operations-portal.md) — a configurable request engine documented as supporting 30 request types across 13 departments, with role-based queues, SLA tracking, a PWA offline queue, deployment runbooks, and smoke testing.
 
-- agentic and AI-assisted engineering workflows;
-- safer infrastructure and business-process automation;
-- observable, recoverable deployment systems;
-- internal platforms that turn manual operations into coherent products.
+## Public code demonstrations
+
+- [CRM_TEST](https://github.com/falconexlover/CRM_TEST) — a compact FastAPI demonstration of weighted lead routing, workload limits, validation, analytics, and OpenAPI. It demonstrates the routing model; it is not presented as business-outcome proof.
+- [url-shortener-boto](https://github.com/falconexlover/url-shortener-boto) — a compact FastAPI URL shortener with SQLite persistence, custom aliases, CRUD endpoints, validation, and pytest. It demonstrates API and test structure; it is not presented as an operating case study.
+
+## Working principles
+
+- **Merged does not mean delivered.** The result is the accepted flow, not the repository event.
+- **Operational clarity is product quality.** Logs, metrics, runbooks, and ownership are part of the system.
+- **Recovery has to be tested.** Reliability without a recovery path is an unbounded promise.
+- **Proof needs a boundary.** Public code proves only what a reviewer can inspect; private work stays private unless it is sanitized and cleared.
+
+## Start a useful conversation
+
+Bring one problematic process and three facts:
+
+1. What must work?
+2. Where does it fail?
+3. Who accepts the result?
+
+The first response defines scope, known risks, and the next verifiable step.
+
+Telegram: [@Star_Burster001](https://t.me/Star_Burster001)<br>
+Instagram: [@star_burster001](https://www.instagram.com/star_burster001/)
 
 ---
 
-<div align="center">
+## Коротко по-русски
 
-`BUILD WITH CONTEXT // OPERATE WITH EVIDENCE // RECOVER BY DESIGN`
+Я инженер продуктовых и операционных систем. Довожу хрупкие цифровые процессы до работающего, наблюдаемого и восстанавливаемого состояния.
 
-</div>
+Работа заканчивается не на merge. Она заканчивается, когда реальный сценарий принят, его состояние видно, а восстановление не зависит от догадок.
+
+Если хотите разобрать один процесс, пришлите три факта: что должно работать, где ломается и кто принимает результат.
+
+---
+
+**Disclosure boundary:** no client names, private systems, personal data, internal addresses, confidential screenshots, or unverified performance and business-impact claims are published here.
