@@ -10,7 +10,7 @@
 
 </div>
 
-[← Return to operator profile](../README.md)
+[← Return to systems profile](../README.md)
 
 ## `01 // context`
 A customer-facing booking platform required a production-ready application and an operating model that could be maintained safely after release.
@@ -35,4 +35,4 @@ A customer-facing booking platform required a production-ready application and a
 RELEASE → OBSERVE → VERIFY → RECOVER
 ```
 
-[← Return to operator profile](../README.md)
+[← Return to systems profile](../README.md)

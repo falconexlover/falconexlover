@@ -17,14 +17,14 @@ I build software that survives contact with production — from product flows an
 </div>
 
 ```text
-> booting operator profile...
+> booting systems profile...
 > product engineering ........ READY
 > infrastructure & automation  READY
 > observability & recovery .... READY
 > real-world acceptance ....... REQUIRED
 ```
 
-## `01 // operator profile`
+## `01 // systems profile`
 
 My work sits where product engineering meets operations. I design and ship customer-facing applications, internal tools, automation, and the production systems around them. The finish line is a working business flow — backed by tests, logs, monitoring, documentation, and a recovery path.
 

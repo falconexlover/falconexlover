@@ -53,7 +53,7 @@
       <path d="M120 26l59 34v68l-59 34-59-34V60z" fill="none" stroke="#FF2BD6" stroke-opacity="0.7" stroke-width="2"/>
       <path d="M91 119l20-58 17 37 42-13-50 58z" fill="none" stroke="#7CFF00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
       <circle cx="120" cy="96" r="5" fill="#F5FBFF"/>
-      <text x="120" y="224" text-anchor="middle" fill="#A9BDCB" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="4">OPERATOR // 01</text>
+      <text x="120" y="224" text-anchor="middle" fill="#A9BDCB" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="4">SYSTEM NODE // 01</text>
     </g>
 
     <path d="M0 358h1200" stroke="url(#hero-neon)" stroke-width="4"/>

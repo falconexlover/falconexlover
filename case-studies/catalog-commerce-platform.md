@@ -10,7 +10,7 @@
 
 </div>
 
-[← Return to operator profile](../README.md)
+[← Return to systems profile](../README.md)
 
 ## `01 // context`
 A modern product catalog and customer-request platform needed a maintainable frontend, data model, API layer, and quality controls.
@@ -33,4 +33,4 @@ A modern product catalog and customer-request platform needed a maintainable fro
 MODEL → VALIDATE → DELIVER → MEASURE
 ```
 
-[← Return to operator profile](../README.md)
+[← Return to systems profile](../README.md)
