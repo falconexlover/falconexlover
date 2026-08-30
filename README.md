@@ -7,28 +7,9 @@ I build and operate reliable internal and customer-facing software systems end t
 
 ## Selected case studies
 
-### Booking & operations platform
-Independent end-to-end delivery of a booking-oriented web platform.
-
-- Designed the application architecture around Node.js, PostgreSQL, Redis, Docker Compose, and Nginx.
-- Built a release workflow with GitHub Actions, configuration validation, security checks, and staging deployment gates.
-- Added structured logging, Prometheus metrics, Grafana dashboards, Loki, Alertmanager, and operational runbooks.
-- Implemented production-oriented safeguards including rate limiting, database connection pooling, migrations, and payment-webhook protection.
-
-### Product catalog & commerce platform
-Independent end-to-end delivery of a modern web platform for a product catalog and customer requests.
-
-- Built with Next.js, TypeScript, React, Prisma, PostgreSQL, Tailwind CSS, and Zod.
-- Implemented catalog search, filters, forms, service-location discovery, API routes, and SEO foundations.
-- Established engineering workflow: branch governance, frontend quality gates, smoke testing, documentation, and observability practices.
-
-### Employee operations portal
-Independent end-to-end prototype of an internal service portal for operational requests and employee communications.
-
-- Built 30 request types across 13 departments using a declarative form model.
-- Implemented role-based access, operator queues with SLA and escalation, internal chat, announcements, knowledge base, and management dashboards.
-- Added PWA offline request queue, automatic database migrations, backup rotation, Docker/PostgreSQL deployment package, runbooks, and E2E smoke tests.
-- Stack: Next.js, TypeScript, React, SQLite/PostgreSQL, Docker, Playwright.
+- [Booking & Operations Platform](case-studies/booking-operations-platform.md) — delivery pipeline, Docker, Nginx, observability, and operational runbooks.
+- [Catalog & Commerce Platform](case-studies/catalog-commerce-platform.md) — Next.js, TypeScript, PostgreSQL, typed API workflows, and quality gates.
+- [Employee Operations Portal](case-studies/employee-operations-portal.md) — role-based request workflows, PWA offline support, backup automation, and deployment documentation.
 
 ## Public code samples
 
