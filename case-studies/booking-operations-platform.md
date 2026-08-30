@@ -1,38 +1,48 @@
-<div align="center">
+<picture>
+  <source media="(max-width: 720px)" srcset="../assets/brand/github-readme-hero-mobile-780x390.png">
+  <img src="../assets/brand/github-readme-hero-desktop-1280x320.png" alt="Star_Burster — Product and Operational Systems Engineer. Merged does not mean delivered." width="1280">
+</picture>
 
-![FalconExLover — Neon Ops](../assets/neon-ops-header.svg)
+[← Back to the profile](../README.md)
 
-# `MISSION FILE // OPS-01`
+# Booking & Operations Platform
 
-**BOOKING & OPERATIONS PLATFORM**
+**Owner-authored case study · Product delivery · Platform engineering · Observability**
 
-`PRODUCT DELIVERY` · `PLATFORM ENGINEERING` · `OBSERVABILITY`
+## Context
 
-</div>
+A customer-facing booking platform needed more than application code. The delivery path also had to make configuration, service dependencies, releases, operating signals, and recovery work understandable after launch.
 
-[← Return to systems profile](../README.md)
+## Constraint
 
-## `01 // context`
-A customer-facing booking platform required a production-ready application and an operating model that could be maintained safely after release.
+The working flow crossed the application, PostgreSQL, Redis, Nginx, containers, and the monitoring stack. A repository event alone could not show whether that complete path was ready to operate.
 
-## `02 // independent delivery`
-- Designed the service architecture and deployment topology.
-- Built backend and frontend delivery flow around Node.js, PostgreSQL, Redis, Docker Compose, and Nginx.
-- Added environment-specific configuration and release checks.
-- Implemented observability: structured logs, Prometheus metrics, Grafana dashboards, Loki, and Alertmanager.
-- Established GitHub Actions validation, security scanning, staging checks, and deployment runbooks.
+## Decisions
 
-## `03 // engineering outcomes`
-- Release process is documented and repeatable.
-- Operational signals are visible through logs, metrics, dashboards, and alerts.
-- Configuration, database, and service dependencies are explicitly managed.
+- structured the backend and frontend delivery flow around Node.js, PostgreSQL, Redis, Docker Compose, and Nginx;
+- separated environment-specific configuration from the application and documented service dependencies;
+- added structured logs, Prometheus metrics, Grafana dashboards, Loki, and Alertmanager;
+- defined GitHub Actions validation, security scanning, staging checks, release checks, and deployment runbooks;
+- treated recovery instructions as part of delivery rather than post-release housekeeping.
 
-## `04 // systems loadout`
-
-`Node.js` · `PostgreSQL` · `Redis` · `Docker Compose` · `Nginx` · `GitHub Actions` · `Prometheus` · `Grafana` · `Loki` · `Alertmanager`
+## Verification path
 
 ```text
-RELEASE → OBSERVE → VERIFY → RECOVER
+CHANGE → AUTOMATED CHECKS → STAGING CHECK → RELEASE → SIGNALS → RECOVERY PATH
 ```
 
-[← Return to systems profile](../README.md)
+The public case documents the controls and the expected verification sequence. It does not expose private dashboards, customer data, internal addresses, or production credentials.
+
+## Result
+
+The application stack, release path, monitoring surface, configuration boundaries, and recovery responsibilities are documented as one operating system instead of unrelated tools.
+
+## Evidence boundary
+
+This case demonstrates the documented architecture and operating method. It does not independently prove uptime, revenue, performance improvement, customer acceptance, or production scale.
+
+## Коротко по-русски
+
+Платформа бронирования описана как единый рабочий контур: приложение, данные, кеш, прокси, выпуск, наблюдаемость и восстановление. Публичный кейс подтверждает состав стека и метод проверки, но не заявляет неподтверждённые показатели бизнеса, производительности или доступности.
+
+[← Back to the profile](../README.md)

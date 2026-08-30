@@ -30,6 +30,19 @@ CONTEXT → RISK → SMALLEST REVERSIBLE CHANGE → VERIFY THE REAL FLOW → REC
 4. Verify tests, operating signals, and the real user or business flow.
 5. Document the remaining uncertainty and recovery path.
 
+## Private work, public boundaries
+
+Most substantial product and client work lives in private repositories because it contains business context, infrastructure details, or operating data that should not be exposed.
+
+The private portfolio spans:
+
+- booking and service operations across interface, API, data, deployment, and observability;
+- employee services for web, Android, and iOS, including role-based workflows and unreliable-connectivity paths;
+- typed catalog and commerce systems with data migration, request, and release controls;
+- Telegram, AI-routing, marketplace, and data-analysis products built across TypeScript, Python, Java, and Swift.
+
+These categories describe engineering scope; they are not presented as independently verified business outcomes. The public code and sanitized cases below are the inspectable evidence layer.
+
 ## Selected case studies
 
 These are owner-authored technical cases. They document implementation choices and operating practices; they do not claim independent validation of business impact.
