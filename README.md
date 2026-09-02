@@ -7,9 +7,40 @@
 
 **Product & Operational Systems Engineer**
 
-I turn fragile digital processes into working, observable, and recoverable systems.
+I turn fragile digital processes into working, visible, and recoverable systems.
 
-Writing code is part of the job. Delivery also needs a real acceptance flow, visible operating evidence, and a recovery path that does not depend on guesswork.
+I take ownership of the whole path: understand where a process loses time or trust,
+build the smallest useful solution, make its state visible, and define how the team
+recovers when something fails.
+
+## For decision-makers
+
+The work usually starts with one of three management problems:
+
+- customers can submit a request, but nobody can confidently say what happens next;
+- several systems participate in one transaction, and a partial failure becomes manual chaos;
+- a process works while its author is present, but has no visible state or recovery path.
+
+The public demonstrations below turn those problems into inspectable workflows. They
+use fictional data and independently recreated code; private customer systems remain private.
+
+## Public demonstrations
+
+| Management problem | Demonstration | What you can see |
+| --- | --- | --- |
+| Keep booking requests visible and show problems before they become customer conflicts | [Booking Reliability Lab](https://github.com/falconexlover/booking-reliability-lab) · [open demo](https://falconexlover.github.io/booking-reliability-lab/) | a guest request, one shared queue, an attention signal, and a recovery walkthrough |
+| Keep one customer action tied to one visible order when another system stops responding | [Reliable Order Pipeline](https://github.com/falconexlover/reliable-order-pipeline) · [open demo](https://falconexlover.github.io/reliable-order-pipeline/) | accepted work, limited repeat attempts, a clear human decision, and the recorded result |
+| Keep internal requests traceable across people, deadlines, and poor connectivity | [Offline Operations Workflow](https://github.com/falconexlover/offline-operations-workflow) · [open demo](https://falconexlover.github.io/offline-operations-workflow/) | open workload, deadline risk, the next responsible role, and requests waiting to be sent |
+
+<p align="center">
+  <a href="https://falconexlover.github.io/booking-reliability-lab/"><img src="https://raw.githubusercontent.com/falconexlover/booking-reliability-lab/main/assets/screenshot-desktop.png" width="31%" alt="Booking management demonstration"></a>
+  <a href="https://falconexlover.github.io/reliable-order-pipeline/"><img src="https://raw.githubusercontent.com/falconexlover/reliable-order-pipeline/main/assets/screenshot-desktop.png" width="31%" alt="Order management demonstration"></a>
+  <a href="https://falconexlover.github.io/offline-operations-workflow/"><img src="https://raw.githubusercontent.com/falconexlover/offline-operations-workflow/main/assets/screenshot-desktop.png" width="31%" alt="Internal request management demonstration"></a>
+</p>
+
+**Evidence boundary:** these repositories prove only the recreated public behavior and
+artifacts they contain. They do not expose or independently validate private production
+scale, uptime, revenue, adoption, security certification, or customer acceptance.
 
 ## What I work on
 
@@ -24,11 +55,11 @@ Writing code is part of the job. Delivery also needs a real acceptance flow, vis
 CONTEXT → RISK → SMALLEST REVERSIBLE CHANGE → VERIFY THE REAL FLOW → RECOVER
 ```
 
-1. Define what must work and who accepts the result.
-2. Separate known facts from assumptions.
-3. Choose the smallest safe change that can be reviewed or reversed.
-4. Verify tests, operating signals, and the real user or business flow.
-5. Document the remaining uncertainty and recovery path.
+1. Agree what must work and who accepts the result.
+2. Separate facts from assumptions.
+3. Make the smallest safe change that can be reversed.
+4. Check the real customer or employee journey, not only the code.
+5. Record what remains uncertain and how the team recovers.
 
 ## Private work, public boundaries
 
@@ -36,20 +67,21 @@ Most substantial product and client work lives in private repositories because i
 
 The private portfolio spans:
 
-- booking and service operations across interface, API, data, deployment, and observability;
-- employee services for web, Android, and iOS, including role-based workflows and unreliable-connectivity paths;
-- typed catalog and commerce systems with data migration, request, and release controls;
+- booking and service operations across customer journeys, staff work, data, releases, and operating visibility;
+- employee services for web and mobile, including role-based workflows and unreliable-connectivity paths;
+- catalog, order, and external-system workflows with explicit failure and recovery controls;
 - Telegram, AI-routing, marketplace, and data-analysis products built across TypeScript, Python, Java, and Swift.
 
 These categories describe engineering scope; they are not presented as independently verified business outcomes. The public code and sanitized cases below are the inspectable evidence layer.
 
-## Selected case studies
+## Private implementation notes
 
-These are owner-authored technical cases. They document implementation choices and operating practices; they do not claim independent validation of business impact.
+These owner-authored notes preserve the context and decisions behind the clean-room
+demonstrations. They do not claim independent validation of business impact.
 
-- [Booking & Operations Platform](https://github.com/falconexlover/falconexlover/blob/main/case-studies/booking-operations-platform.md) — a documented Node.js delivery and observability stack using PostgreSQL, Redis, Docker Compose, Nginx, Prometheus, Grafana, Loki, and Alertmanager.
-- [Catalog & Commerce Platform](https://github.com/falconexlover/falconexlover/blob/main/case-studies/catalog-commerce-platform.md) — typed catalog and request workflows using Next.js, TypeScript, Prisma, PostgreSQL, and Zod.
-- [Employee Operations Portal](https://github.com/falconexlover/falconexlover/blob/main/case-studies/employee-operations-portal.md) — a configurable request engine documented as supporting 30 request types across 13 departments, with role-based queues, SLA tracking, a PWA offline queue, deployment runbooks, and smoke testing.
+- [Booking & Operations Platform](https://github.com/falconexlover/falconexlover/blob/main/case-studies/booking-operations-platform.md)
+- [Catalog & Commerce Platform](https://github.com/falconexlover/falconexlover/blob/main/case-studies/catalog-commerce-platform.md)
+- [Employee Operations Portal](https://github.com/falconexlover/falconexlover/blob/main/case-studies/employee-operations-portal.md)
 
 ## Public code demonstrations
 
@@ -80,9 +112,10 @@ Instagram: [@star_burster001](https://www.instagram.com/star_burster001/)
 
 ## Коротко по-русски
 
-Я инженер продуктовых и операционных систем. Довожу хрупкие цифровые процессы до работающего, наблюдаемого и восстанавливаемого состояния.
+Я инженер продуктовых и операционных систем. Довожу хрупкие цифровые процессы до работающего, видимого руководителю и восстанавливаемого состояния.
 
-Работа заканчивается не на merge. Она заканчивается, когда реальный сценарий принят, его состояние видно, а восстановление не зависит от догадок.
+Работа заканчивается не на merge. Она заканчивается, когда реальный сценарий работает,
+руководитель понимает его состояние, а восстановление не зависит от догадок.
 
 Если хотите разобрать один процесс, пришлите три факта: что должно работать, где ломается и кто принимает результат.
 

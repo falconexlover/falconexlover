@@ -7,23 +7,41 @@
 
 # Employee Operations Portal
 
-**Owner-authored case study · Enterprise workflows · Offline resilience · Operations**
+**Owner-authored case study · Internal requests · Deadline visibility · Offline resilience**
 
 ## Context
 
-Fragmented employee requests needed one digital entry point without building and maintaining a separate page and handling path for every department and request type.
+Internal requests were fragmented across people and channels. Employees could not
+reliably see what happened next, coordinators lacked one queue, and management lacked
+a clear view of delays and ownership.
 
 ## Constraint
 
-The documented scope covers 30 request types across 13 departments, role-specific queues, SLA tracking, escalation, employee communication, unreliable connectivity, deployment, backups, and recurring operations.
+The workflow had to support multiple request categories and responsible groups, keep
+deadlines visible, and remain usable when connectivity was unreliable.
 
 ## Decisions
 
-- built a declarative request engine so new request types can be configured instead of receiving a dedicated page;
-- added role-based access, role-specific work queues, SLA tracking, escalation, communication features, a knowledge base, and management dashboards;
-- added a PWA offline request queue for unreliable connectivity;
-- supported local operation with SQLite and deployment with PostgreSQL;
-- packaged deployment with Docker, automated migrations, backup rotation, operational runbooks, recurring notifications, and end-to-end smoke testing.
+- created one understandable request lifecycle instead of a separate ad-hoc path for each category;
+- gave employees and coordinators different views of the same accountable request;
+- made deadlines, queues, escalation, and responsibility visible;
+- showed whether a request was delivered or was still waiting on the employee's device;
+- documented deployment, recurring work, and recovery responsibilities.
+
+## What management can see
+
+- how many requests are waiting and where;
+- which deadlines are approaching or missed;
+- who owns the next action;
+- whether an offline request was delivered or still needs attention.
+
+## Public demonstration
+
+[Open the live walkthrough](https://falconexlover.github.io/offline-operations-workflow/) ·
+[Review the public repository](https://github.com/falconexlover/offline-operations-workflow)
+
+This independently recreated workflow uses fictional data and gives management one view
+of open workload, deadline risk, responsibility, and requests still waiting to be sent.
 
 ## Verification path
 
@@ -35,14 +53,20 @@ The documented acceptance surface covers request creation, routing, role visibil
 
 ## Result
 
-The public case documents a configurable request system that brings multiple departmental workflows into one model while keeping deployment and operational responsibilities explicit.
+The public case documents one visible request model that connects employee expectations,
+coordinator work, management deadlines, unreliable connectivity, and recovery.
 
 ## Evidence boundary
 
-The figures `30 request types` and `13 departments` are owner-authored scope facts. The documented system is a prototype: it has not been deployed or connected to live identity, mail, access-control, service-management, or accounting systems. This case does not independently prove adoption, time savings, SLA improvement, availability, security, or organization-wide business impact.
+The documented private system is a prototype. It has not been deployed or connected to
+live identity, mail, access-control, service-management, or accounting systems. This case
+does not independently prove adoption, time savings, deadline improvement, availability,
+security, or organization-wide business impact.
 
 ## Коротко по-русски
 
-Портал объединяет 30 типов заявок для 13 подразделений через декларативный движок, ролевые очереди, SLA-контур и offline-очередь PWA. Это прототип: он не развёрнут и не подключён к боевым системам. Публичный кейс показывает заявленный охват и устройство рабочего потока, но не выдаёт их за независимо подтверждённый бизнес-эффект.
+Кейс показывает понятный руководителю путь внутренней заявки: кто принял, кто отвечает,
+где приближается срок и что произошло с заявкой при плохой связи. Это прототип на
+вымышленных данных, не подключённый к рабочим системам организации.
 
 [← Back to the profile](../README.md)

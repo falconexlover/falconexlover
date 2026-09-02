@@ -7,23 +7,40 @@
 
 # Catalog & Commerce Platform
 
-**Owner-authored case study · Full-stack product · Typed workflows · Quality gates**
+**Owner-authored case study · Order integrity · External hand-offs · Recovery**
 
 ## Context
 
-A product catalog and customer-request platform needed one maintainable path from the interface through validation and data persistence to release checks.
+An order can be accepted in the interface and still be duplicated, partially stored,
+or lost while passing to payment, accounting, or fulfilment. The management problem
+was to keep one customer action tied to one traceable order and surface failed hand-offs.
 
 ## Constraint
 
-Catalog, search, filters, service-location discovery, forms, API routes, and database changes share the same product flow. Weak contracts at any boundary can turn a valid interface action into invalid data or an unreproducible release.
+Several systems participate in the same commercial promise. A temporary failure must
+not silently create a second order or leave staff guessing whether to retry manually.
 
 ## Decisions
 
-- used Next.js, React, and TypeScript for the application surface and shared type contracts;
-- used Prisma and PostgreSQL for the data model and migrations;
-- applied Zod validation at request boundaries;
-- implemented catalog, search, filter, service-location, form, and API workflows as connected product paths;
-- added SEO foundations, branch governance, automated quality gates, smoke testing, documentation, and frontend observability practices.
+- gave each customer action a stable identity so an accidental retry stays the same order;
+- separated accepting an order from handing it to an external system, so a temporary outage is visible and recoverable;
+- added controlled retry, a holding area for repeated failures, and manual reconciliation;
+- connected interface checks, data changes, release checks, and operating responsibility.
+
+## What management can see
+
+- whether the order was accepted once;
+- which external hand-offs succeeded, are waiting, or need attention;
+- what the system will retry automatically;
+- which cases require a controlled manual decision.
+
+## Public demonstration
+
+[Open the live walkthrough](https://falconexlover.github.io/reliable-order-pipeline/) ·
+[Review the public repository](https://github.com/falconexlover/reliable-order-pipeline)
+
+This independently recreated workflow uses fictional data and shows one order being
+accepted, a failed hand-off becoming visible, and a person recording the final decision.
 
 ## Verification path
 
@@ -35,7 +52,8 @@ The documented checks cover typed interfaces, request validation, migration-mana
 
 ## Result
 
-The public case shows a typed catalog and request architecture in which interface behavior, validation, API handling, data changes, and release checks are treated as one maintainable flow.
+The public case shows how one customer action remains one traceable order, including
+the cases where an external system is temporarily unavailable.
 
 ## Evidence boundary
 
@@ -43,6 +61,8 @@ This case demonstrates implementation choices and documented quality controls. I
 
 ## Коротко по-русски
 
-Каталог и клиентские заявки собраны в типизированный поток от интерфейса и валидации до API, модели данных и smoke-проверки. Кейс показывает архитектурные решения и границы контроля качества, но не приписывает им неподтверждённый коммерческий эффект.
+Кейс показывает понятный руководителю путь заказа: одно действие клиента — один заказ;
+неудачная передача во внешнюю систему видна, повторяется контролируемо и при необходимости
+попадает на ручную сверку. Публичная демонстрация использует только вымышленные данные.
 
 [← Back to the profile](../README.md)

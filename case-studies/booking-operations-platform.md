@@ -7,23 +7,42 @@
 
 # Booking & Operations Platform
 
-**Owner-authored case study · Product delivery · Platform engineering · Observability**
+**Owner-authored case study · Customer flow · Operating visibility · Recovery**
 
 ## Context
 
-A customer-facing booking platform needed more than application code. The delivery path also had to make configuration, service dependencies, releases, operating signals, and recovery work understandable after launch.
+A booking can look successful to a customer while staff receive incomplete data,
+the same resource is promised twice, or a failed hand-off remains invisible. The
+management problem was to make the complete booking path understandable and recoverable.
 
 ## Constraint
 
-The working flow crossed the application, PostgreSQL, Redis, Nginx, containers, and the monitoring stack. A repository event alone could not show whether that complete path was ready to operate.
+One customer action crossed several technical components and staff responsibilities.
+A code release alone could not show whether the customer promise, staff view, operating
+signal, and recovery procedure agreed with each other.
 
 ## Decisions
 
-- structured the backend and frontend delivery flow around Node.js, PostgreSQL, Redis, Docker Compose, and Nginx;
-- separated environment-specific configuration from the application and documented service dependencies;
-- added structured logs, Prometheus metrics, Grafana dashboards, Loki, and Alertmanager;
-- defined GitHub Actions validation, security scanning, staging checks, release checks, and deployment runbooks;
-- treated recovery instructions as part of delivery rather than post-release housekeeping.
+- treated a booking as one accountable business flow rather than separate website and back-office tasks;
+- made conflicts and incomplete hand-offs visible instead of relying on a customer complaint;
+- connected release checks, operating signals, and recovery responsibilities;
+- documented what staff should verify before calling a change delivered;
+- treated recovery instructions as part of the product, not emergency knowledge held by one person.
+
+## What management can see
+
+- whether a request was accepted, rejected as a conflict, or needs attention;
+- which failures require staff action;
+- what must be checked after a release;
+- how the team returns to a known state when a dependency fails.
+
+## Public demonstration
+
+[Open the live walkthrough](https://falconexlover.github.io/booking-reliability-lab/) ·
+[Review the public repository](https://github.com/falconexlover/booking-reliability-lab)
+
+This independently recreated workflow uses fictional data and shows a request moving
+from the customer form into the staff queue, followed by a visible issue and recovery.
 
 ## Verification path
 
@@ -35,7 +54,8 @@ The public case documents the controls and the expected verification sequence. I
 
 ## Result
 
-The application stack, release path, monitoring surface, configuration boundaries, and recovery responsibilities are documented as one operating system instead of unrelated tools.
+The booking, staff response, release path, visible operating state, and recovery
+responsibilities are documented as one managed process instead of unrelated tools.
 
 ## Evidence boundary
 
@@ -43,6 +63,8 @@ This case demonstrates the documented architecture and operating method. It does
 
 ## Коротко по-русски
 
-Платформа бронирования описана как единый рабочий контур: приложение, данные, кеш, прокси, выпуск, наблюдаемость и восстановление. Публичный кейс подтверждает состав стека и метод проверки, но не заявляет неподтверждённые показатели бизнеса, производительности или доступности.
+Кейс показывает понятный руководителю контур: заявка клиента, риск конфликта,
+действие сотрудников, видимое состояние и восстановление. Публичная демонстрация
+собрана заново на вымышленных данных и не раскрывает рабочую систему клиента.
 
 [← Back to the profile](../README.md)
